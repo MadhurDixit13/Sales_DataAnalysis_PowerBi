@@ -3,6 +3,9 @@
 
  ## Things I learned
  - Data Modelling
- - PowerBi
+ - PowerBI
  - Data transformation and cleaning
  - Exploratory Data Analysis
+
+## Acknowledgement
+Coding Challenge from a youtube channel codebasics Atliq sales insights using data analysis
