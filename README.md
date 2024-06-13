@@ -1,5 +1,5 @@
-# Sales_DataAnalysis_PowerBi
- Data Analysis on a companies total sales at various branches using Power Bi 
+# Sales_DataAnalysis_PowerBI
+ Data Analysis on a companies total sales of its various branches using Power BI 
 
  ## Things I learned
  - Data Modelling
