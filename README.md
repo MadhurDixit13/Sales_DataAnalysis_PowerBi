@@ -1,38 +1,47 @@
-# Sales_DataAnalysis_PowerBI
+# Sales Data Analysis with Power BI
 
- ## Description
+## Description
 
- Data Analysis on a companies total sales of its various branches using Power BI.
+This project involves analyzing a company's total sales across various branches using Power BI.
 
- ## Data Modeling
+## Data Modeling
 
- Star Schema model.
- ![Data Modeling](ScreenShots/DataModeling.png)
+The data is structured using a Star Schema model.
 
- ## Data Cleaning
+![Data Modeling](ScreenShots/DataModeling.png)
 
- 1. Sales Market Table:
-   - Removed the entries which did not have any region as they were the transactions outside India and we are only focusing on the transactions in India as they are currently operating only in India.
-   - Before
-   ![Data Cleaning Sales Market Before](ScreenShots/sales_markets_before.png)
-   - After
-   ![Data Cleaning Sales Market After](ScreenShots/sales_markets_after.png)
- 2. Sales Transactions Table:
-   - Removed the entries which had sales amount as 0 or in negative and added a new column norm_curr in which I converted all the USD sales amounts to INR to keep it consistent throughout for data analysis (1USD = 84INR).
-   - Before 
+## Data Cleaning
+
+### 1. Sales Market Table:
+- **Removed Non-India Entries**: Excluded transactions without a region specified, as they were outside India. The focus is solely on transactions within India, where the company operates.
+  - **Before Cleaning**:
+    ![Data Cleaning Sales Market Before](ScreenShots/sales_markets_before.png)
+  - **After Cleaning**:
+    ![Data Cleaning Sales Market After](ScreenShots/sales_markets_after.png)
+
+### 2. Sales Transactions Table:
+- **Removed Invalid Entries**: Excluded transactions with a sales amount of zero or negative. Added a new column `norm_curr`, converting all USD amounts to INR for consistency (1 USD = 83 INR).
+  - **Before Cleaning**:
     ![Data Cleaning Sales Transactions Before](ScreenShots/sales_transactions_before.png)
-   - After
+  - **After Cleaning**:
     ![Data Cleaning Sales Transactions After](ScreenShots/sales_transactions_after.png)
+- **Handled Currency Duplicates**: Addressed data duplication due to inconsistent currency types (`INR`, `INR/r`, `USD`, `USD/r`). Kept the rows with `INR/r` and `USD/r` as they had more reliable data and removed the duplicates (`INR` and `USD`).
+  - **Before Cleaning**:
+    ![Data Cleaning Sales Transactions Before](ScreenShots/currency_duplicates.png)
+    ![Data Cleaning Sales Transactions Before](ScreenShots/currency_good.png)
+    ![Data Cleaning Sales Transactions Before](ScreenShots/currency_bad.png)
+  - **After Cleaning**:
+    ![Data Cleaning Sales Transactions After](ScreenShots/currency_cleanup.png)
 
- ## Things I learned
+## Lessons Learned
 
- - Data Modelling
- - PowerBI
- - Data transformation and cleaning
- - Exploratory Data Analysis
+- Data Modeling
+- Power BI
+- Data Transformation and Cleaning
+- Exploratory Data Analysis
 
-## Acknowledgement
+## Acknowledgments
 
-Coding Challenge from a youtube channel codebasics Sales Insights Power BI project.
-[codebasics](https://www.youtube.com/playlist?list=PLeo1K3hjS3uva8pk1FI3iK9kCOKQdz1I9)
+This project is based on a coding challenge from the Codebasics YouTube channel's Sales Insights Power BI project. Special thanks to [Codebasics](https://www.youtube.com/playlist?list=PLeo1K3hjS3uva8pk1FI3iK9kCOKQdz1I9) for the guidance and resources.
+
 
